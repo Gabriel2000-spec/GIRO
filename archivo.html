@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hemeroteca - Archivo Hist髍ico de Ediciones Pasadas</title>
+    <title>Hemeroteca - Archivo Hist贸rico de Ediciones Pasadas</title>
     <style>
         /* =========================================================================
-           ESTILOS PROFESIONALES DE LA HEMEROTECA (ADAPTADO A M覸ILES)
+           ESTILOS PROFESIONALES DE LA HEMEROTECA (ADAPTADO A M脫VILES)
            ========================================================================= */
         body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; margin: 0; padding: 0; background-color: #f7fafc; color: #2d3748; }
         header { background-color: #8b4513; padding: 20px; text-align: center; color: white; box-shadow: 0 4px 6px rgba(0,0,0,0.1); }
@@ -44,13 +44,13 @@
     <!-- CABECERA DE LA HEMEROTECA -->
     <header>
         <h1>??? Hemeroteca Digital</h1>
-        <p>Consulta las ediciones y publicaciones anteriores del peri骴ico</p>
+        <p>Consulta las ediciones y publicaciones anteriores del peri贸dico</p>
     </header>
 
     <!-- BARRA DE HERRAMIENTAS -->
     <div class="contenedor-herramientas">
-        <!-- BOT覰 DE REGRESO AL PERI覦ICO PRINCIPAL -->
-        <a href="pagina2.html" class="btn-retorno">? Volver al Peri骴ico Actual</a>
+        <!-- BOT脫N DE REGRESO AL PERI脫DICO PRINCIPAL -->
+        <a href="page2.html" class="btn-retorno">? Volver al Peri贸dico Actual</a>
         
         <!-- SELECTOR DE FECHAS REALES -->
         <select id="selectorHistoricoFechas" class="selector-historico" onchange="mostrarEdicionAntigua(this.value)">
@@ -58,7 +58,7 @@
         </select>
     </div>
 
-    <!-- REJILLA DE IM罣ENES ANTIGUAS -->
+    <!-- REJILLA DE IM脕GENES ANTIGUAS -->
     <div id="contenedorGaleriaHistorica"></div>
 
     <!-- LIGHTBOX PARA VER EN PANTALLA COMPLETA CON SU X -->
@@ -80,7 +80,7 @@
                 const resultado = await respuesta.json();
                 
                 if(resultado.status === "success") {
-                    // Filtramos para ignorar celdas vac韆s u ocultas
+                    // Filtramos para ignorar celdas vac铆as u ocultas
                     todasLasNoticias = resultado.data.filter(n => n.fecha && String(n.fecha).trim() !== "" && String(n.fecha).trim() !== "OCULTO");
                     
                     // Procesar y clasificar las fotos por sus fechas reales
@@ -92,7 +92,7 @@
             }
         }
 
-        // Agrupa las publicaciones en carpetas l骻icas por d韆
+        // Agrupa las publicaciones en carpetas l贸gicas por d铆a
         function agruparPorFechasReales() {
             edicionesAgrupadas = {};
             
@@ -108,13 +108,13 @@
             });
         }
 
-        // Llena el selector 鷑icamente con las fechas que existen en tu Excel
+        // Llena el selector 煤nicamente con las fechas que existen en tu Excel
         function renderizarMenuFechas() {
             const selector = document.getElementById("selectorHistoricoFechas");
             if (!selector) return;
             selector.innerHTML = "";
 
-            // Ordenar fechas del pasado de m醩 nueva a m醩 antigua
+            // Ordenar fechas del pasado de m谩s nueva a m谩s antigua
             let fechasOrdenadas = Object.keys(edicionesAgrupadas).sort((a, b) => {
                 let pA = a.split("-").map(Number);
                 let pB = b.split("-").map(Number);
@@ -126,7 +126,7 @@
                 return;
             }
 
-            // Opci髇 inicial informativa
+            // Opci贸n inicial informativa
             let opcionDefecto = document.createElement("option");
             opcionDefecto.value = "";
             opcionDefecto.innerText = "?? Selecciona una Fecha Pasada";
@@ -135,12 +135,12 @@
             fechasOrdenadas.forEach(fecha => {
                 const opcion = document.createElement("option");
                 opcion.value = fecha;
-                opcion.innerText = `?? Edici髇 del: ${fecha}`;
+                opcion.innerText = `?? Edici贸n del: ${fecha}`;
                 selector.appendChild(opcion);
             });
         }
 
-        // Despliega todas las fotos que correspondan al d韆 seleccionado
+        // Despliega todas las fotos que correspondan al d铆a seleccionado
         function mostrarEdicionAntigua(fechaSeleccionada) {
             const contenedor = document.getElementById("contenedorGaleriaHistorica");
             if (!contenedor) return;
@@ -159,13 +159,13 @@
                 tarjeta.innerHTML = `
                     <div class="imagen-wrapper-historico" onclick="abrirLightboxHistorico('${urlImagen}')">
                         <img src="${urlImagen}" alt="Foto Archivo">
-                        <!-- ICONO DE LUPA Y AVISO DE AMPLIACI覰 COMPLETO -->
+                        <!-- ICONO DE LUPA Y AVISO DE AMPLIACI脫N COMPLETO -->
                         <div class="banner-lupa-historico">
                             ?? Clic para ampliar imagen
                         </div>
                     </div>
                     <div class="cuerpo-historico">
-                        <h2>${noticia.titulo || "Sin T韙ulo"}</h2>
+                        <h2>${noticia.titulo || "Sin T铆tulo"}</h2>
                         <p>${noticia.texto || ""}</p>
                     </div>
                 `;
@@ -173,7 +173,7 @@
             });
         }
 
-        // SISTEMA LIGHTBOX DEL HIST覴ICO CON SU RESPECTIVA X
+        // SISTEMA LIGHTBOX DEL HIST脫RICO CON SU RESPECTIVA X
         const modalHistorico = document.getElementById("lightboxHistoricoModal");
         const imgHistoricaAmpliada = document.getElementById("imagenHistoricaAmpliada");
 
