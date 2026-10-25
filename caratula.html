@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Bienvenidos al periÛdico Giro</title>
+  <title>Bienvenidos al peri√≥dico Giro</title>
   <style>
     /* Reset and base styles */
     *, *::before, *::after {
@@ -285,7 +285,7 @@
 </head>
 <body>
   <!-- Header with horizontal aligned buttons -->
-  <header role="banner" aria-label="NavegaciÛn principal">
+  <header role="banner" aria-label="Navegaci√≥n principal">
       
       <button type="button" aria-label="Radio Online" onclick="window.location.href='https://matrix-proyec.github.io/VIVE-FM-ONLINE/'">Radio Online</button>
       
@@ -298,11 +298,11 @@
   </header>
   
   <div id="warning-message" role="alert" aria-live="assertive">
-    AtenciÛn: esta p·gina est· protegida
+    Atenci√≥n: esta p√°gina est√° protegida
   
 
-  <h1>Contenido de la P·gina</h1>
-  <p>Esta p·gina intenta proteger su cÛdigo fuente.</p>
+  <h1>Contenido de la P√°gina</h1>
+  <p>Esta p√°gina intenta proteger su c√≥digo fuente.</p>
   
   <p><p>
 </div>
@@ -310,8 +310,8 @@
 
   <main role="main">
     <!-- Title with animated color and border -->
-    <div class="title-container" aria-label="Bienvenidos al periÛdico Giro">
-      <span class="animated-text" aria-hidden="true">Bienvenidos al periÛdico Giro</span>
+    <div class="title-container" aria-label="Bienvenidos al peri√≥dico Giro">
+      <span class="animated-text" aria-hidden="true">Bienvenidos al peri√≥dico Giro</span>
       <!-- Container for the 3 moving colored balls -->
       <div class="balls-container" aria-hidden="true">
         <div class="ball yellow" aria-hidden="true"></div>
@@ -321,21 +321,21 @@
     </div>
 
     <!-- Subtitles below the main title -->
-    <section class="subtitles" aria-label="DescripciÛn del periÛdico Giro">
+    <section class="subtitles" aria-label="Descripci√≥n del peri√≥dico Giro">
       <p><strong> </strong></p>
-      <p>El cÌrculo de la informaciÛn veraz, el pulso informativo de Ciudad BolÌvar y el estado BolÌvar</p>
+      <p>El c√≠rculo de la informaci√≥n veraz, el pulso informativo de Ciudad Bol√≠var y el estado Bol√≠var</p>
       <p>Noticiero digital comprometido con la verdad y la actualidad de Venezuela.</p>
-      <p>TelÈfono de RedacciÛn: <a href="tel:+584149860967" style="color:#ff0; text-decoration: underline;">0414-9860967</a></p>
+      <p>Tel√©fono de Redacci√≥n: <a href="tel:+584149860967" style="color:#ff0; text-decoration: underline;">0414-9860967</a></p>
     </section>
 
     <!-- Large enter button -->
-    <button class="enter-button" id="enterBtn" aria-label="Entrar a la p·gina del periÛdico">
+    <button class="enter-button" id="enterBtn" aria-label="Entrar a la p√°gina del peri√≥dico">
       Entrar
     </button>
   </main>
 
   <!-- Footer with social media logos (SVG icons embedded for accessibility and no external dependencies) -->
-  <footer role="contentinfo" aria-label="Redes sociales del periÛdico Giro">
+  <footer role="contentinfo" aria-label="Redes sociales del peri√≥dico Giro">
     <a href="https://chat.whatsapp.com/JSMzBwhieduLEbcIfahvO5" target="_blank" rel="noopener" aria-label="WhatsApp">
       <!-- WhatsApp Icon -->
       <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#25D366" viewBox="0 0 24 24" aria-hidden="true">
@@ -429,7 +429,7 @@
 
       // After animation ends (8s), navigate to pagina2.html
       setTimeout(() => {
-        window.location.href = 'pagina2.html';
+        window.location.href = 'page2.html';
       }, 2000);
     }
 
@@ -457,17 +457,17 @@
     
     
     
-     // FunciÛn para mostrar el mensaje de advertencia
+     // Funci√≥n para mostrar el mensaje de advertencia
     function showWarning() {
       const warning = document.getElementById('warning-message');
       warning.style.display = 'block';
-      // Oculta el mensaje despuÈs de 3 segundos
+      // Oculta el mensaje despu√©s de 3 segundos
       setTimeout(() => {
         warning.style.display = 'none';
       }, 3000);
     }
 
-    // Deshabilitar clic derecho (abrir men˙ contextual)
+    // Deshabilitar clic derecho (abrir men√∫ contextual)
     window.addEventListener('contextmenu', function(event) {
       event.preventDefault();
       showWarning();
