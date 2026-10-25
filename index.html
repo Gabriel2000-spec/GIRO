@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>EdiciÛn visual de prensa</title>
+    <title>Edici√≥n visual de prensa</title>
     <style>
         * {
             box-sizing: border-box;
@@ -13,7 +13,7 @@
         }
 
         body {
-            /* Imagen de fondo profesional sobre comunicaciÛn con capa oscura comercial */
+            /* Imagen de fondo profesional sobre comunicaci√≥n con capa oscura comercial */
             background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.85)), 
                         url('https://unsplash.com') no-repeat center center fixed;
             background-size: cover;
@@ -37,7 +37,7 @@
             font-weight: 600;
             letter-spacing: 0.5px;
             box-shadow: 0 3px 10px rgba(0,0,0,0.3);
-            display: none; /* Se activa din·micamente por cÛdigo */
+            display: none; /* Se activa din√°micamente por c√≥digo */
             z-index: 1000;
             animation: slideDown 0.5s ease-out;
         }
@@ -181,7 +181,7 @@
             transform: translateY(-1px);
         }
 
-        /* Bloque estÈtico de suspensiÛn propuesto por ti para sustituir al botÛn */
+        /* Bloque est√©tico de suspensi√≥n propuesto por ti para sustituir al bot√≥n */
         .suspended-notice-block {
             width: 100%;
             background: rgba(255, 51, 51, 0.15);
@@ -194,7 +194,7 @@
             font-weight: 600;
             line-height: 1.4;
             box-shadow: inset 0 0 10px rgba(255,51,51,0.1);
-            display: none; /* Aparece en lugar del botÛn si el estado es SUSPENDIDO */
+            display: none; /* Aparece en lugar del bot√≥n si el estado es SUSPENDIDO */
         }
 
         .message {
@@ -237,19 +237,19 @@
 
     <!-- Banner superior inteligente de aviso preventivo de pago -->
     <div class="top-billing-banner" id="billing-banner">
-        Aviso de FacturaciÛn: Acceso suspendido: Pago pendiente de ($10 USD) (VenciÛ el dÌa 5) El botÛn se activar· al reportar su depÛsito.
+        Aviso de Facturaci√≥n: Acceso suspendido: Pago pendiente de ($10 USD) (Venci√≥ el d√≠a 5) El bot√≥n se activar√° al reportar su dep√≥sito.
     </div>
 
     <!-- Encabezado corporativo requerido -->
     <div class="header-container">
-        <h1>EdiciÛn visual de prensa</h1>
-        <p>Edita tu prensa r·pido y seguro</p>
+        <h1>Edici√≥n visual de prensa</h1>
+        <p>Edita tu prensa r√°pido y seguro</p>
     </div>
 
     <!-- Espacio del Formulario de Entrada Inteligente -->
     <div class="main-content">
         <div class="auth-card">
-            <!-- El tÌtulo cambiar· por cÛdigo a "Configurar DueÒo" si la base de datos est· vacÌa -->
+            <!-- El t√≠tulo cambiar√° por c√≥digo a "Configurar Due√±o" si la base de datos est√° vac√≠a -->
             <div class="card-title" id="form-card-title">Cargando Sistema...</div>
 
             <form id="auth-form" onsubmit="handleSubmit(event)" autocomplete="off">
@@ -259,10 +259,10 @@
                 </div>
                 
                 <div class="form-group">
-                    <label for="password">ContraseÒa</label>
+                    <label for="password">Contrase√±a</label>
                     <div class="password-wrapper">
-                        <input type="password" id="password" required placeholder="ïïïïïïïï" autocomplete="current-password">
-                        <button type="button" class="toggle-password-btn" id="toggle-eye-btn" onclick="togglePasswordVisibility()" aria-label="Mostrar contraseÒa">
+                        <input type="password" id="password" required placeholder="¬ï¬ï¬ï¬ï¬ï¬ï¬ï¬ï" autocomplete="current-password">
+                        <button type="button" class="toggle-password-btn" id="toggle-eye-btn" onclick="togglePasswordVisibility()" aria-label="Mostrar contrase√±a">
                             <svg id="eye-icon" viewBox="0 0 24 24">
                                 <path d="M12 4.5C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5c-1.73-4.39-6-7.5-11-7.5zM12 17c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5zm0-8c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/>
                             </svg>
@@ -270,12 +270,12 @@
                     </div>
                 </div>
                 
-                <!-- ESPACIO DE ACCI”N DE ENTRADA: BotÛn Real o Bloqueo por SuscripciÛn -->
+                <!-- ESPACIO DE ACCI√ìN DE ENTRADA: Bot√≥n Real o Bloqueo por Suscripci√≥n -->
                 <button type="submit" class="btn-submit" id="submit-btn" style="display: none;">Ingresar al Sistema</button>
                 
                 <div class="suspended-notice-block" id="suspended-block">
-                    ?? Servicio suspendido temporalmente por falta de pago ($10 USD/mes). El plazo venciÛ el dÌa 5 de este mes.<br>
-                    ComunÌquese de inmediato con Soporte TÈcnico.
+                    ?? Servicio suspendido temporalmente por falta de pago ($10 USD/mes). El plazo venci√≥ el d√≠a 5 de este mes.<br>
+                    Comun√≠quese de inmediato con Soporte T√©cnico.
                 </div>
 
                 <div class="message" id="response-message"></div>
@@ -283,25 +283,25 @@
         </div>
     </div>
 
-    <!-- Pies de p·gina requeridos estructurados comercialmente -->
+    <!-- Pies de p√°gina requeridos estructurados comercialmente -->
     <footer>
         <div class="dev-info">
-            Para m·s informaciÛn comunÌcate con el desarrollador de esta p·gina. Soporte TÈcnico: <a href="mailto:yasiukmercalito@gmail.com">yasiukmercalito@gmail.com</a>
+            Para m√°s informaci√≥n comun√≠cate con el desarrollador de esta p√°gina. Soporte T√©cnico: <a href="mailto:yasiukmercalito@gmail.com">yasiukmercalito@gmail.com</a>
         </div>
         <div class="copyright">
-            &copy; RJ-PRODUCI”N 2026 Derecho al autor
+            &copy; RJ-PRODUCI√ìN 2026 Derecho al autor
         </div>
     </footer>
         <script>
         // =========================================================================
-        // CONFIGURACI”N CENTRALIZADA: PEGA TU URL DE APPS SCRIPT AQUÕ UNA SOLA VEZ
+        // CONFIGURACI√ìN CENTRALIZADA: PEGA TU URL DE APPS SCRIPT AQU√ç UNA SOLA VEZ
         // =========================================================================
         const WEB_APP_URL = "https://script.google.com/macros/s/AKfycbzcdbLn9OdT961OOTp-i-Yd63kFV88gVA58tXRT3osMq9xCNhLYybh10NYNRCtzE6HP/exec"; 
         // =========================================================================
 
-        let currentMode = "login"; // Cambiar· a "setup" si la hoja de c·lculo est· vacÌa
+        let currentMode = "login"; // Cambiar√° a "setup" si la hoja de c√°lculo est√° vac√≠a
 
-        // EjecuciÛn inmediata al abrir la p·gina web para comprobar el estado real de la cuenta
+        // Ejecuci√≥n inmediata al abrir la p√°gina web para comprobar el estado real de la cuenta
         window.addEventListener('DOMContentLoaded', () => {
             checkSystemStatus();
         });
@@ -313,27 +313,27 @@
             const billingBanner = document.getElementById('billing-banner');
             const responseMessage = document.getElementById('response-message');
 
-            // Consultar de forma remota el estado de seguridad y facturaciÛn en Google Sheets
+            // Consultar de forma remota el estado de seguridad y facturaci√≥n en Google Sheets
             fetch(`${WEB_APP_URL}?action=checkStatus`)
                 .then(response => response.json())
                 .then(data => {
-                    // 1. Evaluar estado de facturaciÛn mensual ($10)
+                    // 1. Evaluar estado de facturaci√≥n mensual ($10)
                     if (data.serviceStatus === "SUSPENDIDO") {
                         billingBanner.style.display = "block";
                         suspendedBlock.style.display = "block";
-                        submitBtn.style.display = "none"; // Desaparece fÌsicamente el botÛn
+                        submitBtn.style.display = "none"; // Desaparece f√≠sicamente el bot√≥n
                         cardTitle.innerText = "Acceso Restringido";
                         return;
                     }
 
-                    // 2. Evaluar si la base de datos est· vacÌa para el Registro ⁄nico del DueÒo
+                    // 2. Evaluar si la base de datos est√° vac√≠a para el Registro √önico del Due√±o
                     if (data.hasUser === false) {
                         currentMode = "setup";
-                        cardTitle.innerText = "Configurar Administrador ⁄nico";
+                        cardTitle.innerText = "Configurar Administrador √önico";
                         submitBtn.innerText = "Registrar y Asegurar Cuenta";
                         submitBtn.style.display = "block";
                         responseMessage.style.color = "#00bcff";
-                        responseMessage.innerText = "El sistema detectÛ que est· libre. Configure su clave privada.";
+                        responseMessage.innerText = "El sistema detect√≥ que est√° libre. Configure su clave privada.";
                     } else {
                         currentMode = "login";
                         cardTitle.innerText = "Control de Acceso";
@@ -342,7 +342,7 @@
                     }
                 })
                 .catch(error => {
-                    console.error('Error de conexiÛn:', error);
+                    console.error('Error de conexi√≥n:', error);
                     cardTitle.innerText = "Error de Servidor";
                     responseMessage.style.color = "#FF3333";
                     responseMessage.innerText = "No se pudo sincronizar la base de datos en la nube.";
@@ -384,8 +384,8 @@
                             // Si se acaba de registrar, recarga la interfaz para aplicar el candado eterno de inmediato
                             setTimeout(() => { location.reload(); }, 1500);
                         } else {
-                            // RedirecciÛn directa hacia la p·gina 2 del periÛdico
-                            setTimeout(() => { window.location.href = "page2.html"; }, 1200);
+                            // Redirecci√≥n directa hacia la p√°gina 2 del peri√≥dico
+                            setTimeout(() => { window.location.href = "edtor.html"; }, 1200);
                         }
                     } else {
                         messageDiv.style.color = "#FF3333";
@@ -395,7 +395,7 @@
                 .catch(error => {
                     console.error('Error:', error);
                     messageDiv.style.color = "#FF3333";
-                    messageDiv.innerText = "Error crÌtico de envÌo hacia el servidor.";
+                    messageDiv.innerText = "Error cr√≠tico de env√≠o hacia el servidor.";
                 });
         }
     </script>
