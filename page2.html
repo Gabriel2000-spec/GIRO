@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>El Diario Comercial - Periódico Digital</title>
+    <title>El Diario Comercial - PeriÃ³dico Digital</title>
     <link rel="stylesheet" href="estilos.css">
     
    <style>
@@ -108,7 +108,7 @@ header h1 {
     color: #444;
 }
 
-/* SISTEMA LIGHTBOX COMERCIAL (Página Pública) */
+/* SISTEMA LIGHTBOX COMERCIAL (PÃ¡gina PÃºblica) */
 .modal-flotante {
     display: none;
     position: fixed;
@@ -273,16 +273,16 @@ header h1 {
 
     <header>
         <h1>GIRO</h1>
-        <p style="margin:5px 0 0 0; font-family:sans-serif; letter-spacing:1px; color:#bbb;">El círculo de la información veraz</p>
+        <p style="margin:5px 0 0 0; font-family:sans-serif; letter-spacing:1px; color:#bbb;">El cÃ­rculo de la informaciÃ³n veraz</p>
         <p>
          <a href="index.html">? Volver al Login</a>
         
     </header>
 
     <div class="contenedor">
-        <!-- Rejilla Dinámica donde se inyectan las noticias -->
+        <!-- Rejilla DinÃ¡mica donde se inyectan las noticias -->
         <div id="contenedorNoticias" class="noticias-grid">
-            <p style="text-align: center; grid-column: 1/-1;">Cargando las últimas noticias...</p>
+            <p style="text-align: center; grid-column: 1/-1;">Cargando las Ãºltimas noticias...</p>
         </div>
     </div>
 
@@ -298,10 +298,10 @@ header h1 {
     
 <footer>
         <div class="dev-info">
-            Para más información comunícate con el desarrollador de esta página. Soporte Técnico: <a href="mailto:yasiukmercalito@gmail.com">yasiukmercalito@gmail.com</a>
+            Para mÃ¡s informaciÃ³n comunÃ­cate con el desarrollador de esta pÃ¡gina. Soporte TÃ©cnico: <a href="mailto:yasiukmercalito@gmail.com">yasiukmercalito@gmail.com</a>
         </div>
         <div class="copyright">
-            &copy; RJ-PRODUCIÓN 2026
+            &copy; RJ-PRODUCIÃ“N 2026
         </div>
     </footer>
 
@@ -310,7 +310,7 @@ header h1 {
    
 
         // =========================================================================
-        // 1. CONFIGURACIÓN DEL PERIÓDICO COMERCIAL DE 10 EN 10 (COMPLETO)
+        // 1. CONFIGURACIÃ“N DEL PERIÃ“DICO COMERCIAL DE 10 EN 10 (COMPLETO)
         // =========================================================================
         const API_URL = " https://script.google.com/macros/s/AKfycbw7tIdTnPDNgEs97bC_n8n11qqzKNgYU6TE0guFp-ZfddG1tUSPraWBMcMWD_cFoOWU3Q/exec";
 
@@ -318,14 +318,14 @@ header h1 {
         let paginaActual = 0;
         const noticiasPorPagina = 10;
 
-        // Cargar datos desde Google Sheets al iniciar la página
+        // Cargar datos desde Google Sheets al iniciar la pÃ¡gina
         async function cargarNoticiasPublicas() {
             try {
                 const respuesta = await fetch(API_URL);
                 const resultado = await respuesta.json();
                 
                 if(resultado.status === "success") {
-                    // FILTRO DE SEGURIDAD: Ignora de golpe cualquier fila que el operador borró en el editor ("OCULTO")
+                    // FILTRO DE SEGURIDAD: Ignora de golpe cualquier fila que el operador borrÃ³ en el editor ("OCULTO")
                     todasLasNoticias = resultado.data.filter(n => n.fecha && String(n.fecha).trim() !== "" && String(n.fecha).trim() !== "OCULTO");
                     
                     ponerLogoFondoEncabezado();
@@ -340,7 +340,7 @@ header h1 {
             }
         }
 
-        // CAPA TRANSPARENTE: Coloca el logo de fondo tipo marca de agua detrás de tus textos
+        // CAPA TRANSPARENTE: Coloca el logo de fondo tipo marca de agua detrÃ¡s de tus textos
         function ponerLogoFondoEncabezado() {
             const encabezado = document.querySelector("header"); 
             if (encabezado) {
@@ -380,7 +380,7 @@ header h1 {
             setInterval(actualizarHora, 1000);
         }
 
-        // CONTROLES SUPERIORES: Botones compactos móviles con LED verde de adorno parpadeante
+        // CONTROLES SUPERIORES: Botones compactos mÃ³viles con LED verde de adorno parpadeante
         function crearControlesNavegacionSup() {
             const contenedorNoticias = document.getElementById("contenedorNoticias");
             if (document.getElementById("barraNavegacionSuperior")) return;
@@ -412,7 +412,7 @@ header h1 {
             contenedorNoticias.parentNode.insertBefore(barraSup, contenedorNoticias);
         }
 
-        // CONTROLES INFERIORES: Réplica exacta de botones limpios abajo
+        // CONTROLES INFERIORES: RÃ©plica exacta de botones limpios abajo
         function crearControlesNavegacionInf() {
             if (document.getElementById("barraNavegacionInferior")) return;
             const contenedorNoticias = document.getElementById("contenedorNoticias");
@@ -438,7 +438,7 @@ header h1 {
             const inicio = paginaActual * noticiasPorPagina;
             let lote = todasLasNoticias.slice(inicio, inicio + noticiasPorPagina);
 
-            // AUTO-RELLENO DE LOGOS: Si faltan fotos en la última página, caen abajo al final
+            // AUTO-RELLENO DE LOGOS: Si faltan fotos en la Ãºltima pÃ¡gina, caen abajo al final
             if (lote.length > 0 && lote.length < noticiasPorPagina) {
                 while (lote.length < noticiasPorPagina) {
                     lote.push({ id: "relleno", titulo: "", subtitulo: "", texto: "", imagen_url: "" });
@@ -454,9 +454,9 @@ header h1 {
                     ? logoPredeterminado 
                     : noticia.imagen_url;
 
-                const tituloFinal = noticia.id === "relleno" ? "Espacio Publicitario" : (noticia.titulo || "Sin Título");
+                const tituloFinal = noticia.id === "relleno" ? "Espacio Publicitario" : (noticia.titulo || "Sin TÃ­tulo");
                 const subtituloFinal = noticia.id === "relleno" ? "Prensa Comercial" : (noticia.subtitulo || "");
-                const textoFinal = noticia.id === "relleno" ? "Contenedor reservado para la siguiente actualización del periódico." : (noticia.texto || "");
+                const textoFinal = noticia.id === "relleno" ? "Contenedor reservado para la siguiente actualizaciÃ³n del periÃ³dico." : (noticia.texto || "");
 
                 tarjeta.innerHTML = `
                     <div class="noticia-imagen-wrapper" onclick="abrirLightbox('${urlImagenFinal}')" style="position: relative; cursor: pointer; overflow: hidden;">
@@ -474,14 +474,14 @@ header h1 {
                 contenedor.appendChild(tarjeta);
             });
 
-            // Solo dibuja la barra inferior si hay suficiente contenido para pasar la página
+            // Solo dibuja la barra inferior si hay suficiente contenido para pasar la pÃ¡gina
             if (todasLasNoticias.length > noticiasPorPagina) {
                 crearControlesNavegacionInf();
                 actualizarEstadoBotones();
             }
         }
 
-            // CONTROL DE ACCIÓN DE BOTONES (SIN CONFIGURACIONES ERRÓNEAS)
+            // CONTROL DE ACCIÃ“N DE BOTONES (SIN CONFIGURACIONES ERRÃ“NEAS)
         function cambiarPagina(direccion) {
             const nuevaPagina = paginaActual + direccion;
             
@@ -492,7 +492,7 @@ header h1 {
             }
         }
 
-        // Sincronización perfecta del bloqueo de botones arriba y abajo
+        // SincronizaciÃ³n perfecta del bloqueo de botones arriba y abajo
         function actualizarEstadoBotones() {
             const btnPrevSup = document.getElementById("btnPrevSup");
             const btnNextSup = document.getElementById("btnNextSup");
@@ -509,7 +509,7 @@ header h1 {
         }
 
         // =========================================================================
-        // 2. LÓGICA DE CONTROL DE IMAGEN FLOTANTE (LIGHTBOX ORIGINAL COMPLETADO)
+        // 2. LÃ“GICA DE CONTROL DE IMAGEN FLOTANTE (LIGHTBOX ORIGINAL COMPLETADO)
         // =========================================================================
         const modal = document.getElementById("lightboxModal");
         const imgAmpliada = document.getElementById("imagenLightboxAmpliada");
@@ -543,12 +543,12 @@ header h1 {
 
 
         // =========================================================================
-        // SINOPSIS DEL MENÚ FLOTANTE: ACCESO DIRECTO A LA HEMEROTECA DIGITAL
+        // SINOPSIS DEL MENÃš FLOTANTE: ACCESO DIRECTO A LA HEMEROTECA DIGITAL
         // =========================================================================
         function crearMenuFlotanteHemeroteca() {
             if (document.getElementById("btnMenuFlotanteHemeroteca")) return;
 
-            // Inyectar los estilos CSS necesarios en la cabecera de la página
+            // Inyectar los estilos CSS necesarios en la cabecera de la pÃ¡gina
             const estilosMenu = document.createElement("style");
             estilosMenu.innerHTML = `
                 .contenedor-menu-historico { position: fixed; bottom: 25px; left: 25px; z-index: 99999; display: flex; align-items: center; gap: 10px; font-family: sans-serif; }
@@ -560,31 +560,31 @@ header h1 {
             `;
             document.head.appendChild(estilosMenu);
 
-            // Crear los elementos estructurales HTML en el DOM de la página pública
+            // Crear los elementos estructurales HTML en el DOM de la pÃ¡gina pÃºblica
             const contenedorGlobal = document.createElement("div");
             contenedorGlobal.id = "btnMenuFlotanteHemeroteca";
             contenedorGlobal.className = "contenedor-menu-historico";
 
             contenedorGlobal.innerHTML = `
-                <button class="btn-hamburguesa-flotante" onclick="redirigirAHemeroteca()" title="Abrir Menú">?</button>
+                <button class="btn-hamburguesa-flotante" onclick="redirigirAHemeroteca()" title="Abrir MenÃº">?</button>
                 <div id="avisoCartelHemeroteca" class="globo-aviso-menu">??? Visita la Hemeroteca Digital</div>
             `;
 
             document.body.appendChild(contenedorGlobal);
 
-            // Ocultar el aviso flotante después de 6 segundos de lectura para que no estorbe la pantalla móvil
+            // Ocultar el aviso flotante despuÃ©s de 6 segundos de lectura para que no estorbe la pantalla mÃ³vil
             setTimeout(() => {
                 const cartel = document.getElementById("avisoCartelHemeroteca");
                 if (cartel) cartel.classList.add("ocultar-aviso-global");
             }, 6000);
         }
 
-        // Redirección instantánea al archivo de fotos antiguas
+        // RedirecciÃ³n instantÃ¡nea al archivo de fotos antiguas
         function redirigirAHemeroteca() {
-            window.location.href = "archivo.html";
+            window.location.href = "caratula.html";
         }
 
-        // Registrar la inicialización junto con la carga del DOM de la página pública
+        // Registrar la inicializaciÃ³n junto con la carga del DOM de la pÃ¡gina pÃºblica
         window.addEventListener("DOMContentLoaded", crearMenuFlotanteHemeroteca);
         
         
